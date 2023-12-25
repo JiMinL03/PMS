@@ -17,7 +17,7 @@ public class ClientDTO {
         this.password = password;
     }
 
-    public ClientDTO(String ID, String password, int usingTime, int remainingTime, int chargingTime, int payment) {
+    public ClientDTO(String ID, String password, int chargingTime, int usingTime, int remainingTime, int payment) {
         this.ID = ID;
         this.password = password;
         this.chargingTime = chargingTime;
@@ -28,7 +28,7 @@ public class ClientDTO {
 
     @Override
     public String toString() {
-        return ID + password + usingTime + remainingTime + chargingTime + payment;
+        return ID +','+ password +','+ chargingTime +','+ usingTime +','+ remainingTime +','+ payment+'\n';
     }
 
     public String getID() {
