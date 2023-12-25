@@ -1,28 +1,31 @@
 package com.mycompany.pms.GUI;
 
+import com.mycompany.pms.GUI.DAO.ChargingTimeDAO;
 import com.mycompany.pms.GUI.DTO.ClientDTO;
-import com.mycompany.pms.GUI.Login.LoginDAO;
+import com.mycompany.pms.GUI.DTO.ManagerDTO;
+import com.mycompany.pms.GUI.DAO.LoginDAO;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
 public class LoginGUI extends javax.swing.JFrame {
-
+    
     private String id;
     private String pw;
     private int usingTime;
     private int remainingTime;
     private int chargingTime;
     private int payment;
-
+    
     LoginDAO login = new LoginDAO();
-
+    ChargingTimeDAO charging = new ChargingTimeDAO();
+    
     public LoginGUI() {
         initComponents();
         getContentPane().setBackground(Color.white);
         setLocationRelativeTo(null);
         setResizable(false);
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -32,7 +35,7 @@ public class LoginGUI extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
         ID = new javax.swing.JTextField();
         startButton = new javax.swing.JButton();
-        joinButton = new javax.swing.JButton();
+        membershipButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,12 +63,17 @@ public class LoginGUI extends javax.swing.JFrame {
             }
         });
 
-        joinButton.setBackground(new java.awt.Color(216, 216, 216));
-        joinButton.setFont(new java.awt.Font("한컴 고딕", 0, 18)); // NOI18N
-        joinButton.setText("회원가입");
+        membershipButton.setBackground(new java.awt.Color(216, 216, 216));
+        membershipButton.setFont(new java.awt.Font("한컴 고딕", 0, 18)); // NOI18N
+        membershipButton.setText("회원가입");
+        membershipButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                membershipButtonActionPerformed(evt);
+            }
+        });
 
-        jLabel3.setFont(new java.awt.Font("LG Smart UI SemiBold", 1, 48)); // NOI18N
-        jLabel3.setText("Login");
+        jLabel3.setFont(new java.awt.Font("LG Smart UI SemiBold", 1, 18)); // NOI18N
+        jLabel3.setText("짐인플레이 회원은 플레이 아이디로 로그인 해주세요.");
         jLabel3.setToolTipText("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -78,24 +86,25 @@ public class LoginGUI extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(ID, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(password, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE))
+                .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ID)
-                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(joinButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(membershipButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(37, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(81, 81, 81))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(startButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
@@ -107,8 +116,8 @@ public class LoginGUI extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(joinButton)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addComponent(membershipButton)
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
@@ -117,23 +126,37 @@ public class LoginGUI extends javax.swing.JFrame {
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
         id = ID.getText();
         pw = password.getText();
-        ClientDTO client = new ClientDTO(id, pw);
         
-        if (login.readLogintxt(client)) {
+        ClientDTO client = new ClientDTO(id, pw, chargingTime, usingTime, remainingTime, payment);
+        ManagerDTO manager = new ManagerDTO(id, pw);
+        
+        if (login.readClienttxt(client) && charging.readChargingTime(client,id)) { //회원이고, 이용시간이 0이 아닐 때 메뉴화면 이동
             MenuGUI menu = new MenuGUI();
             menu.setVisible(true);
             dispose();
-        }
-        else
-            JOptionPane.showMessageDialog(null, "로그인 정보가 틀렸습니다.");
+        } else if (login.readClienttxt(client) && !charging.readChargingTime(client,id)) { //회원이고, 이용시간이 0일 때 충전화면 이동
+            ChargingTimeGUI time = new ChargingTimeGUI();
+            time.setVisible(true);
+            dispose();
+        } else if (login.readManagertxt(manager)) {
+            
+        } else
+            JOptionPane.showMessageDialog(
+                    null, "로그인 정보가 틀렸습니다.");
     }//GEN-LAST:event_startButtonActionPerformed
+
+    private void membershipButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_membershipButtonActionPerformed
+        MembershipGUI member = new MembershipGUI();
+        member.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_membershipButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ID;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JButton joinButton;
+    private javax.swing.JButton membershipButton;
     private javax.swing.JPasswordField password;
     private javax.swing.JButton startButton;
     // End of variables declaration//GEN-END:variables
