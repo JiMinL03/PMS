@@ -9,10 +9,9 @@ public class MembershipGUI extends javax.swing.JFrame {
 
     private String ID;
     private String Password;
-    private int usingTime;
-    private int remainingTime;
-    private int chargingTime;
-    private int payment;
+    private String usingTime = "00:00";
+    private String chargingTime = "00:00";
+    private int seat = 0;
 
     public MembershipGUI() {
         initComponents();
@@ -182,7 +181,7 @@ public class MembershipGUI extends javax.swing.JFrame {
     private void membershipButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_membershipButtonActionPerformed
         ID = id.getText();
         Password = password.getText();
-        ClientDTO client = new ClientDTO(ID, Password, chargingTime, usingTime, remainingTime, payment);
+        ClientDTO client = new ClientDTO(ID, Password, chargingTime, usingTime, seat);
         MembershipDAO membership = new MembershipDAO();
         if (checkBlank()) {
             if (membership.checkOverlap(ID)) {

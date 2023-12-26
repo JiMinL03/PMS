@@ -8,24 +8,23 @@ import java.awt.Color;
 import javax.swing.JOptionPane;
 
 public class LoginGUI extends javax.swing.JFrame {
-    
+
     private String id;
     private String pw;
-    private int usingTime;
-    private int remainingTime;
-    private int chargingTime;
-    private int payment;
-    
+    private String usingTime = "00:00";
+    private String chargingTime = "00:00";
+    private int seat = 0;
+
     LoginDAO login = new LoginDAO();
     ChargingTimeDAO charging = new ChargingTimeDAO();
-    
+
     public LoginGUI() {
         initComponents();
         getContentPane().setBackground(Color.white);
         setLocationRelativeTo(null);
         setResizable(false);
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -126,20 +125,20 @@ public class LoginGUI extends javax.swing.JFrame {
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
         id = ID.getText();
         pw = password.getText();
-        
-        ClientDTO client = new ClientDTO(id, pw, chargingTime, usingTime, remainingTime, payment);
+
+        ClientDTO client = new ClientDTO(id, pw, chargingTime, usingTime, seat);
         ManagerDTO manager = new ManagerDTO(id, pw);
-        
-        if (login.readClienttxt(client) && charging.readChargingTime(client,id)) { //회원이고, 이용시간이 0이 아닐 때 메뉴화면 이동
+
+        if (login.readClienttxt(client) && charging.readChargingTime(client, id)) { //회원이고, 이용시간이 0이 아닐 때 메뉴화면 이동
             MainGUI main = new MainGUI(id);
             main.setVisible(true);
             dispose();
-        } else if (login.readClienttxt(client) && !charging.readChargingTime(client,id)) { //회원이고, 이용시간이 0일 때 충전화면 이동
+        } else if (login.readClienttxt(client) && !charging.readChargingTime(client, id)) { //회원이고, 이용시간이 0일 때 충전화면 이동
             ChargingTimeGUI time = new ChargingTimeGUI(id);
             time.setVisible(true);
             dispose();
         } else if (login.readManagertxt(manager)) {
-            
+
         } else
             JOptionPane.showMessageDialog(
                     null, "로그인 정보가 틀렸습니다.");
