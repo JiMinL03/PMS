@@ -6,6 +6,10 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class ChargingTimeDAO {
@@ -29,21 +33,32 @@ public class ChargingTimeDAO {
         return false;
     }
 
-    public boolean inputSelectedTime(String ID, String time, String seat) { //이용시간을 변경
+    public boolean inputSelectedTime(String ID, String time, String seat) {
         List<String> lines = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(clientFile))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] userInfo = line.split(",");
                 if (ID.equals(userInfo[0])) {
-                    userInfo[2] = time; //원래 이용시간과 충전시간을 더하는 기능 구현 필요!
-                    userInfo[5] = seat;
-                    line = String.join(",", userInfo);// 변경된 배열을 다시 문자열로 조합
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+
+                    // 날짜 정보를 임의로 부여 (예: 1970년 1월 1일)
+                    LocalDate arbitraryDate = LocalDate.of(1970, 1, 1);
+
+                    LocalDateTime existingDateTime = LocalDateTime.of(arbitraryDate, LocalTime.parse(userInfo[2], formatter));
+                    LocalTime chargingTime = LocalTime.parse(time, formatter);
+                    LocalDateTime newDateTimeObject = existingDateTime.plusHours(chargingTime.getHour())
+                            .plusMinutes(chargingTime.getMinute());
+                    userInfo[2] = newDateTimeObject.format(formatter);
+                    userInfo[4] = seat;
+                    line = String.join(",", userInfo); // 변경된 배열을 다시 문자열로 조합
                 }
                 lines.add(line);
             }
         } catch (Exception e) {
             System.out.println("ChargingTimeDAO ERROR");
+            e.printStackTrace();
+            return false;
         }
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(clientFile))) {
             for (String lineToWrite : lines) {
@@ -52,6 +67,8 @@ public class ChargingTimeDAO {
             }
         } catch (Exception e) {
             System.out.println("ChargingTimeDAO ERROR");
+            e.printStackTrace();
+            return false;
         }
         return true;
     }

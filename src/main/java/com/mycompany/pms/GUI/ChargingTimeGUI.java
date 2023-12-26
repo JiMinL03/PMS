@@ -87,14 +87,14 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
         twentyHourButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                time = "20:00";
+                time = "10:00";
                 selectedTime.setText(time);
             }
         });
         twentyfiveHourButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                time = "25:00";
+                time = "24:00";
                 selectedTime.setText(time);
             }
         });
@@ -121,12 +121,14 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
         selectedTime = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         selectedSeat = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(786, 600));
 
         jLabel3.setFont(new java.awt.Font("LG Smart UI SemiBold", 1, 18)); // NOI18N
-        jLabel3.setText("안녕하세요. 사용할 요금제를 선택해주세요.");
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel3.setText("제한 충전시간은 24시간입니다.");
         jLabel3.setToolTipText("");
 
         twoHourButton.setBackground(new java.awt.Color(52, 100, 174));
@@ -147,15 +149,15 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
 
         thirteenHourButton.setBackground(new java.awt.Color(52, 100, 174));
         thirteenHourButton.setForeground(new java.awt.Color(255, 255, 255));
-        thirteenHourButton.setText("10,000원 13:00");
+        thirteenHourButton.setText("13,000원 13:00");
 
         twentyfiveHourButton.setBackground(new java.awt.Color(52, 100, 174));
         twentyfiveHourButton.setForeground(new java.awt.Color(255, 255, 255));
-        twentyfiveHourButton.setText("20,000원 25:00");
+        twentyfiveHourButton.setText("6,000원 06:00");
 
         twentyHourButton.setBackground(new java.awt.Color(52, 100, 174));
         twentyHourButton.setForeground(new java.awt.Color(255, 255, 255));
-        twentyHourButton.setText("15,000원 20:00");
+        twentyHourButton.setText("10,000원 10:00");
 
         fourHourButton.setBackground(new java.awt.Color(52, 100, 174));
         fourHourButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -219,15 +221,15 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
         selectedSeat.setFont(new java.awt.Font("한컴 고딕", 0, 18)); // NOI18N
         selectedSeat.setForeground(new java.awt.Color(0, 153, 255));
 
+        jLabel4.setFont(new java.awt.Font("LG Smart UI SemiBold", 1, 18)); // NOI18N
+        jLabel4.setText("안녕하세요. 사용할 요금제를 선택해주세요.");
+        jLabel4.setToolTipText("");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(252, 252, 252)
-                .addComponent(jLabel3)
-                .addContainerGap(251, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(220, 220, 220)
@@ -247,7 +249,7 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
                                 .addComponent(twentyHourButton, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(twentyfiveHourButton, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(layout.createSequentialGroup()
@@ -259,28 +261,35 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(selectedTime)))
+                            .addComponent(selectedTime, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(selectedSeat, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(60, 60, 60))
+                .addGap(54, 54, 54))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(51, 51, 51)
                     .addComponent(threeHourButton, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(602, Short.MAX_VALUE)))
+                    .addContainerGap(598, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(258, Short.MAX_VALUE)
+                    .addComponent(jLabel4)
+                    .addGap(241, 241, 241)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
+                        .addGap(21, 21, 21)
                         .addComponent(fiveHourButton, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(selectedTime, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -310,12 +319,18 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
                         .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(37, 37, 37)
                         .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(96, 96, 96)
                     .addComponent(threeHourButton, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(385, Short.MAX_VALUE)))
+                    .addContainerGap(410, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(10, 10, 10)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(499, Short.MAX_VALUE)))
         );
 
         pack();
@@ -337,7 +352,7 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(
                     null, "요금제와 좌석을 선택해주세요.");
-        }
+        } 
     }//GEN-LAST:event_cardButtonActionPerformed
 
     private void cashButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashButtonActionPerformed
@@ -372,6 +387,7 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton oneHourButton;
     private javax.swing.JTextField selectedSeat;
     private javax.swing.JTextField selectedTime;
