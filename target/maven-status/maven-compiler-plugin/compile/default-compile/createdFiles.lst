@@ -7,11 +7,11 @@ com\mycompany\pms\GUI\DTO\ManagerDTO.class
 com\mycompany\pms\GUI\DAO\ChargingTimeDAO.class
 com\mycompany\pms\GUI\DTO\ClientDTO.class
 com\mycompany\pms\GUI\LoginGUI$1.class
-com\mycompany\pms\GUI\paymentGUI.class
 com\mycompany\pms\GUI\ChargingTimeGUI$11.class
 com\mycompany\pms\GUI\ManagerGUI\M_SeatCare.class
 com\mycompany\pms\GUI\ChargingTimeGUI$7.class
 com\mycompany\pms\GUI\ChargingTimeGUI$2.class
+com\mycompany\pms\GUI\seatGUI$1.class
 com\mycompany\pms\GUI\MenuGUI$1.class
 com\mycompany\pms\GUI\MembershipGUI$2.class
 com\mycompany\pms\GUI\ChargingTimeGUI$6.class
@@ -23,10 +23,12 @@ com\mycompany\pms\GUI\LoginGUI$2.class
 com\mycompany\pms\GUI\MainGUI$1.class
 com\mycompany\pms\GUI\ManagerGUI\M_MenuGUI.class
 com\mycompany\pms\GUI\ChargingTimeGUI$9.class
+com\mycompany\pms\GUI\ChargingTimeGUI$12.class
 com\mycompany\pms\GUI\MembershipGUI.class
 com\mycompany\pms\GUI\ChargingTimeGUI$3.class
 com\mycompany\pms\GUI\ChargingTimeGUI$8.class
 com\mycompany\pms\GUI\LoginGUI.class
+com\mycompany\pms\GUI\seatGUI.class
 com\mycompany\pms\GUI\ChargingTimeGUI$10.class
 com\mycompany\pms\GUI\DAO\LoginDAO.class
 com\mycompany\pms\PMS.class

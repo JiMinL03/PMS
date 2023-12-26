@@ -29,14 +29,15 @@ public class ChargingTimeDAO {
         return false;
     }
 
-    public boolean inputSelectedTime(String ID, String time) { //이용시간을 변경
+    public boolean inputSelectedTime(String ID, String time, String seat) { //이용시간을 변경
         List<String> lines = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(clientFile))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] userInfo = line.split(",");
                 if (ID.equals(userInfo[0])) {
-                    userInfo[2] = time;
+                    userInfo[2] = time; //원래 이용시간과 충전시간을 더하는 기능 구현 필요!
+                    userInfo[5] = seat;
                     line = String.join(",", userInfo);// 변경된 배열을 다시 문자열로 조합
                 }
                 lines.add(line);

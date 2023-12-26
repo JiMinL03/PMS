@@ -7,7 +7,8 @@ public class ClientDTO {
     private int usingTime;
     private int remainingTime;
     private int chargingTime;
-    private int payment;
+    private int seat;
+
     
     public ClientDTO(){
         
@@ -17,18 +18,18 @@ public class ClientDTO {
         this.password = password;
     }
 
-    public ClientDTO(String ID, String password, int chargingTime, int usingTime, int remainingTime, int payment) {
+    public ClientDTO(String ID, String password, int chargingTime, int usingTime, int remainingTime, int seat) {
         this.ID = ID;
         this.password = password;
         this.chargingTime = chargingTime;
         this.remainingTime = remainingTime;
         this.usingTime = usingTime;
-        this.payment = payment;
+        this.seat = seat;
     }
 
     @Override
     public String toString() {
-        return ID +','+ password +','+ chargingTime +','+ usingTime +','+ remainingTime +','+ payment+'\n';
+        return ID +','+ password +','+ chargingTime +','+ usingTime +','+ remainingTime +','+ seat +'\n';
     }
 
     public String getID() {
@@ -71,11 +72,10 @@ public class ClientDTO {
         this.chargingTime = chargingTime;
     }
 
-    public int getPayment() {
-        return payment;
+    public int getSeat() {
+        return seat;
     }
-
-    public void setPayment(int payment) {
-        this.payment = payment;
+    public void setSeat(int seat) {
+        this.seat = seat;
     }
 }
