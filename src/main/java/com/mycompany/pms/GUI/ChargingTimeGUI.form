@@ -35,25 +35,25 @@
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" pref="149" max="-2" attributes="0"/>
+                      <Component id="fiveHourButton" min="-2" pref="149" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jButton1" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Component id="twoHourButton" min="-2" pref="149" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jButton8" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Component id="fourHourButton" min="-2" pref="149" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jButton5" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Component id="thirteenHourButton" min="-2" pref="149" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jButton4" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Component id="oneHourButton" min="-2" pref="149" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton7" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Component id="twentyHourButton" min="-2" pref="149" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jButton6" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Component id="twentyfiveHourButton" min="-2" pref="149" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -61,16 +61,16 @@
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jButton9" min="-2" pref="118" max="-2" attributes="0"/>
+                      <Component id="cardButton" min="-2" pref="118" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton10" min="-2" pref="118" max="-2" attributes="0"/>
+                      <Component id="cashButton" min="-2" pref="118" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jButton11" max="32767" attributes="0"/>
                   <Component id="jButton12" min="-2" pref="254" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" pref="118" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField1" max="32767" attributes="0"/>
+                      <Component id="selectedTime" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
@@ -78,7 +78,7 @@
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" pref="149" max="-2" attributes="0"/>
+                  <Component id="threeHourButton" min="-2" pref="149" max="-2" attributes="0"/>
                   <EmptySpace pref="602" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -91,33 +91,33 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel3" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" pref="71" max="-2" attributes="0"/>
+                      <Component id="fiveHourButton" min="-2" pref="71" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton4" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="jButton5" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="oneHourButton" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="thirteenHourButton" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="jButton8" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="twoHourButton" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="fourHourButton" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton7" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="jButton6" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="twentyHourButton" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="twentyfiveHourButton" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField1" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="selectedTime" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton10" max="32767" attributes="0"/>
-                          <Component id="jButton9" min="-2" pref="95" max="-2" attributes="0"/>
+                          <Component id="cashButton" max="32767" attributes="0"/>
+                          <Component id="cardButton" min="-2" pref="95" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="jButton11" min="-2" pref="70" max="-2" attributes="0"/>
@@ -125,12 +125,12 @@
                       <Component id="jButton12" min="-2" pref="68" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="0" pref="61" max="32767" attributes="0"/>
+              <EmptySpace pref="61" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" pref="71" max="-2" attributes="0"/>
+                  <Component id="threeHourButton" min="-2" pref="71" max="-2" attributes="0"/>
                   <EmptySpace pref="385" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -147,7 +147,7 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="twoHourButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ae" green="64" red="34" type="rgb"/>
@@ -158,7 +158,7 @@
         <Property name="text" type="java.lang.String" value="2,000&#xc6d0; 02:00"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="threeHourButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ae" green="64" red="34" type="rgb"/>
@@ -169,7 +169,7 @@
         <Property name="text" type="java.lang.String" value="3,000&#xc6d0; 03:00"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="fiveHourButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ae" green="64" red="34" type="rgb"/>
@@ -180,7 +180,7 @@
         <Property name="text" type="java.lang.String" value="5,000&#xc6d0; 05:00"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="oneHourButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ae" green="64" red="34" type="rgb"/>
@@ -191,7 +191,7 @@
         <Property name="text" type="java.lang.String" value="1,000&#xc6d0; 01:00"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="thirteenHourButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ae" green="64" red="34" type="rgb"/>
@@ -202,7 +202,7 @@
         <Property name="text" type="java.lang.String" value="10,000&#xc6d0; 13:00"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton6">
+    <Component class="javax.swing.JButton" name="twentyfiveHourButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ae" green="64" red="34" type="rgb"/>
@@ -213,7 +213,7 @@
         <Property name="text" type="java.lang.String" value="20,000&#xc6d0; 25:00"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton7">
+    <Component class="javax.swing.JButton" name="twentyHourButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ae" green="64" red="34" type="rgb"/>
@@ -224,7 +224,7 @@
         <Property name="text" type="java.lang.String" value="15,000&#xc6d0; 20:00"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton8">
+    <Component class="javax.swing.JButton" name="fourHourButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ae" green="64" red="34" type="rgb"/>
@@ -235,7 +235,7 @@
         <Property name="text" type="java.lang.String" value="4,000&#xc6d0; 04:00"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton9">
+    <Component class="javax.swing.JButton" name="cardButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -248,8 +248,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="&#xc2e0;&#xc6a9;&#xce74;&#xb4dc;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cardButtonActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton10">
+    <Component class="javax.swing.JButton" name="cashButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -262,6 +265,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="&#xd604;&#xae08;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cashButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton11">
       <Properties>
@@ -290,6 +296,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="&#xc794;&#xb3c8;&#xbc18;&#xd658;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -302,7 +311,7 @@
         <Property name="text" type="java.lang.String" value="&#xc120;&#xd0dd;&#xd55c; &#xc694;&#xae08;&#xc81c;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="selectedTime">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
