@@ -131,11 +131,11 @@ public class LoginGUI extends javax.swing.JFrame {
         ManagerDTO manager = new ManagerDTO(id, pw);
         
         if (login.readClienttxt(client) && charging.readChargingTime(client,id)) { //회원이고, 이용시간이 0이 아닐 때 메뉴화면 이동
-            MenuGUI menu = new MenuGUI();
-            menu.setVisible(true);
+            MainGUI main = new MainGUI(id);
+            main.setVisible(true);
             dispose();
         } else if (login.readClienttxt(client) && !charging.readChargingTime(client,id)) { //회원이고, 이용시간이 0일 때 충전화면 이동
-            ChargingTimeGUI time = new ChargingTimeGUI();
+            ChargingTimeGUI time = new ChargingTimeGUI(id);
             time.setVisible(true);
             dispose();
         } else if (login.readManagertxt(manager)) {
