@@ -15,6 +15,7 @@ com\mycompany\pms\GUI\seatGUI$1.class
 com\mycompany\pms\GUI\MenuGUI$1.class
 com\mycompany\pms\GUI\MembershipGUI$2.class
 com\mycompany\pms\GUI\ChargingTimeGUI$6.class
+com\mycompany\pms\GUI\DAO\TimerDAO.class
 com\mycompany\pms\GUI\DAO\MembershipDAO.class
 com\mycompany\pms\GUI\MainGUI.class
 com\mycompany\pms\GUI\ChargingTimeGUI$1.class
