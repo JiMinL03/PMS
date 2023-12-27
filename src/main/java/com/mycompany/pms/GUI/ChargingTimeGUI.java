@@ -1,6 +1,7 @@
 package com.mycompany.pms.GUI;
 
 import com.mycompany.pms.GUI.DAO.ChargingTimeDAO;
+import com.mycompany.pms.GUI.DAO.TimerDAO;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,6 +12,8 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
     private static String time;
     private static String ID;
     private static String seat;
+    public boolean timer = false;
+    TimerDAO Timer = new TimerDAO();
     ChargingTimeDAO chargingtime = new ChargingTimeDAO();
 
     public ChargingTimeGUI() {
@@ -346,6 +349,8 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
             selectedSeat.setText(seat + "");
             JOptionPane.showMessageDialog(
                     null, "시간이 충전되었습니다.");
+            timer = true;
+            Timer.timer(timer);
             MainGUI main = new MainGUI();
             main.setVisible(true);
             dispose();
@@ -360,6 +365,8 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
             selectedSeat.setText(seat + "");
             JOptionPane.showMessageDialog(
                     null, "시간이 충전되었습니다.");
+            timer = true;
+            Timer.timer(timer);
             MainGUI main = new MainGUI();
             main.setVisible(true);
             dispose();

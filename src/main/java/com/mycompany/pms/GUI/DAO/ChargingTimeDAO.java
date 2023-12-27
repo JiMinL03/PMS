@@ -22,7 +22,7 @@ public class ChargingTimeDAO {
             while ((line = reader.readLine()) != null) {
                 String[] userInfo = line.split(","); // txt파일에 저장되어있는 아이디와 비밀번호를 나눠서 저장.
                 if (id.equals(userInfo[0])) {
-                    if (!"0".equals(userInfo[2])) {
+                    if (!"00:00".equals(userInfo[2])) {
                         return true;
                     }
                 }
@@ -33,7 +33,7 @@ public class ChargingTimeDAO {
         return false;
     }
 
-    public boolean inputSelectedTime(String ID, String time, String seat) {
+    public boolean inputSelectedTime(String ID, String time, String seat) { //충전시간에서 충전!
         List<String> lines = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(clientFile))) {
             String line;
@@ -57,7 +57,6 @@ public class ChargingTimeDAO {
             }
         } catch (Exception e) {
             System.out.println("ChargingTimeDAO ERROR");
-            e.printStackTrace();
             return false;
         }
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(clientFile))) {
@@ -67,7 +66,6 @@ public class ChargingTimeDAO {
             }
         } catch (Exception e) {
             System.out.println("ChargingTimeDAO ERROR");
-            e.printStackTrace();
             return false;
         }
         return true;
