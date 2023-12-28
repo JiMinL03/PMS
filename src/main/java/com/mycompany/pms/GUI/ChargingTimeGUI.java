@@ -349,8 +349,8 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
             selectedSeat.setText(seat + "");
             JOptionPane.showMessageDialog(
                     null, "시간이 충전되었습니다.");
-            timer = true;
-            Timer.timer(timer);
+            Timer.timer(ID);
+            Timer.startTimer();
             MainGUI main = new MainGUI();
             main.setVisible(true);
             dispose();
@@ -365,8 +365,8 @@ public class ChargingTimeGUI extends javax.swing.JFrame {
             selectedSeat.setText(seat + "");
             JOptionPane.showMessageDialog(
                     null, "시간이 충전되었습니다.");
-            timer = true;
-            Timer.timer(timer);
+            Timer.timer(ID);
+            Timer.startTimer();
             MainGUI main = new MainGUI();
             main.setVisible(true);
             dispose();
