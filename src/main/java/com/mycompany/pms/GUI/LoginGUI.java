@@ -11,8 +11,8 @@ public class LoginGUI extends javax.swing.JFrame {
 
     private String id;
     private String pw;
-    private String usingTime = "00:00";
-    private String chargingTime = "00:00";
+    private String usingTime = "00:00:00";
+    private String chargingTime = "00:00:00";
     private int seat = 0;
 
     LoginDAO login = new LoginDAO();
